@@ -5,7 +5,6 @@ const searchGithub = async (): Promise<Candidate[]> => {
     const start = Math.floor(Math.random() * 100000000) + 1;
 
     // Log the token to verify it is being loaded
-    console.log("GitHub Token (searchGithub):", import.meta.env.VITE_GITHUB_TOKEN);
 
     const response = await fetch(
       `https://api.github.com/users?since=${start}`,
