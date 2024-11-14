@@ -71,13 +71,20 @@ GitHub Scout is designed to assist employers in finding and managing potential c
 
 GitHub Scout uses a GitHub Personal Access Token for authentication with the GitHub API. Create a fine-grained token with public access and add it to the `.env` file as `VITE_GITHUB_TOKEN`.
 
-## Screenshots
+# GitHub Scout
 
-### Home Page - Candidate Search
-![Candidate Search](./Assets/13-01-candidate_search_homepage.png)
+GitHub Scout is a candidate search application that allows employers to search for potential candidates on GitHub, save them, and view detailed information about each candidate.
 
-### Saved Candidates - Sorting and Filtering
-![Saved Candidates](./Assets/13-02-candidate_search_potential_candidates.png)
+### Live Demo
+[GitHub Scout is live on Netlify!](https://githubcanscout.netlify.app/)
+
+### Screenshots
+
+#### Saved Candidates Page
+![Saved Candidates Page](./Assets/Screenshot%202024-11-13%20at%2010.25.51%20PM.png)
+
+#### Candidate Search Page
+![Candidate Search Page](./Assets/Screenshot%202024-11-13%20at%2010.32.25%20PM.png)
 
 ## Future Enhancements
 
