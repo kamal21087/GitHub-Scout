@@ -6,7 +6,6 @@ const searchGithub = async (): Promise<Candidate[]> => {
 
     // Log the token to verify it is being loaded
     console.log("GitHub Token (searchGithub):", import.meta.env.VITE_GITHUB_TOKEN);
-    console.log("GitHub Token (from env):", import.meta.env.VITE_GITHUB_TOKEN);
 
     const response = await fetch(
       `https://api.github.com/users?since=${start}`,
