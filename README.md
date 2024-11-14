@@ -1,50 +1,90 @@
-# React + TypeScript + Vite
+# GitHub Scout
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GitHub Scout is a candidate search application that allows employers to search for potential candidates on GitHub, save them, and view detailed information about each candidate. The application provides options to sort and filter saved candidates for a streamlined hiring process.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
+- [Environment Variables](#environment-variables)
+- [Screenshots](#screenshots)
+- [Future Enhancements](#future-enhancements)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Project Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+GitHub Scout is designed to assist employers in finding and managing potential candidates using GitHub data. Users can search for GitHub users, view their profiles, and save those they’re interested in. The application offers sorting and filtering capabilities to refine the saved candidates list.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **GitHub User Search**: Search for GitHub users by username or view a list of randomly generated users.
+- **Save Candidates**: Add interesting candidates to a saved list for easy reference.
+- **Sort and Filter**: Sort saved candidates by name or follower count and filter by location.
+- **Persisted Data**: Saved candidates are stored locally and persist across sessions.
+- **Responsive Design**: Fully responsive design for a seamless experience on desktop and mobile.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Technologies Used
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: CSS, Bulma (optional if used)
+- **API**: GitHub REST API
+- **Persistence**: Local Storage for saved candidates
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Setup and Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/github-scout.git
+   cd github-scout
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Set Up Environment Variables**:
+   Create a `.env` file in the root directory and add your GitHub Personal Access Token:
+   ```plaintext
+   VITE_GITHUB_TOKEN=your_actual_github_token_here
+   ```
+
+4. **Start the Development Server**:
+   ```bash
+   npm run dev
+   ```
+
+5. **Access the Application**:
+   Open your browser and go to `http://localhost:5173` to view the app.
+
+## Usage
+
+- **Search for Candidates**: On the main page, enter a GitHub username to search or view random candidates.
+- **Save a Candidate**: Click the `+` button to save a candidate, or click `-` to skip to the next candidate.
+- **View Saved Candidates**: Go to the "Saved Candidates" page to see your saved list.
+- **Sort and Filter**: Use the dropdown to sort by name or followers and filter candidates by location. Click "Clear Filters" to reset sorting and filtering.
+
+## Environment Variables
+
+GitHub Scout uses a GitHub Personal Access Token for authentication with the GitHub API. Create a fine-grained token with public access and add it to the `.env` file as `VITE_GITHUB_TOKEN`.
+
+## Screenshots
+
+### Home Page - Candidate Search
+![Candidate Search](./Assets/13-01-candidate_search_homepage.png)
+
+### Saved Candidates - Sorting and Filtering
+![Saved Candidates](./Assets/13-02-candidate_search_potential_candidates.png)
+
+## Future Enhancements
+
+- **Pagination**: Support pagination for random user results.
+- **Advanced Filtering**: Filter by additional criteria such as programming languages or location radius.
+- **Search History**: Allow users to view and clear previous searches.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
