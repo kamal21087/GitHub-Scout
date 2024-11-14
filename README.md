@@ -81,10 +81,10 @@ GitHub Scout is a candidate search application that allows employers to search f
 ### Screenshots
 
 #### Saved Candidates Page
-![Saved Candidates Page](./Assets/Screenshot%202024-11-13%20at%2010.25.51%20PM.png)
+![Saved Candidates Page](./Assets/saved-candidates-page.png)
 
 #### Candidate Search Page
-![Candidate Search Page](./Assets/Screenshot%202024-11-13%20at%2010.32.25%20PM.png)
+![Candidate Search Page](./Assets/candidate-search-page.png)
 
 ## Future Enhancements
 
