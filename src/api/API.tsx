@@ -29,8 +29,6 @@ const searchGithub = async (): Promise<Candidate[]> => {
 
 const searchGithubUser = async (username: string): Promise<Candidate> => {
   try {
-    // Log the token to verify it is being loaded
-    console.log("GitHub Token (searchGithubUser):", import.meta.env.VITE_GITHUB_TOKEN);
 
     const response = await fetch(`https://api.github.com/users/${username}`, {
       headers: {
